@@ -1,0 +1,16 @@
+// Text Farbe Dynamisch anpassen
+@function set-text-color($color){
+  @if(lightness($color) > 40){
+    @return #000;
+  }@else{
+    @return #fff;
+  }
+}
+
+// Horizontal und Vertikal zentrieren
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
